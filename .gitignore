@@ -1,0 +1,6 @@
+# Ignore everything inside snmp_exporter
+/snmp_exporter/*
+
+# Except snmp.yml
+!/snmp_exporter/snmp.yml
+
