@@ -6,6 +6,7 @@ services:
       - "9090:9090"
     volumes:
       - ./prometheus:/etc/prometheus
+      - prometheus_data:/prometheus
     command:
       - "--config.file=/etc/prometheus/prometheus.yml"
       - "--storage.tsdb.path=/prometheus"
@@ -56,6 +57,7 @@ services:
       - "/:/host:ro,rslave"
 volumes:
   grafana_data:
+  prometheus_data:
 networks:
   monitoring:
     driver: bridge
